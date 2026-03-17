@@ -1,0 +1,6 @@
+streamlit
+requests
+beautifulsoup4
+sentence-transformers
+pandas
+numpy>=2.2.4
