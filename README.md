@@ -71,8 +71,8 @@ This makes the system smarter and closer to real-world AI recommendation engines
 ## 📦 Setup Instructions
 
 Clone the repository:
-git clone https://github.com/your-username/ai-product-sentinel.git  
-cd ai-product-sentinel  
+git clone https://github.com/your-username/AI-Product-Sentinel.git
+cd AI-Product-Sentinel
 
 Install dependencies:
 pip install streamlit requests beautifulsoup4 sentence-transformers google-search-results  
