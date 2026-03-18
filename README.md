@@ -146,7 +146,7 @@ Paste any product link (like shoes, electronics, etc.), click **Run Analysis**, 
 
 Watch the demo video below:
 
-[Click to watch demo](DemoVideo/Demo.mp4)
+[Click to watch demo](Demovideo/Demo.mp4)
 
 ## 👩‍💻 Author
 
