@@ -142,6 +142,11 @@ Paste any product link (like shoes, electronics, etc.), click **Run Analysis**, 
 * Deploy the application online
 
 ---
+## 🎥 Demo
+
+Watch the demo video below:
+
+https://user-images.githubusercontent.com/Demovideo/Demo.mp4
 
 ## 👩‍💻 Author
 
