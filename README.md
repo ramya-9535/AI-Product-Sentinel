@@ -97,7 +97,6 @@ cd AI-Product-Sentinel
 git clone https://github.com/your-username/ai-product-sentinel.git  
 cd ai-product-sentinel  
 ```
->>>>>>> ee46b8f (Added README with screenshots)
 
 Install dependencies:
 
