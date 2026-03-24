@@ -1,19 +1,19 @@
 # 🛡️ AI Product Sentinel
 
-AI Product Sentinel is a smart product comparison tool that helps you find similar products across different marketplaces using AI. Instead of relying on simple keyword matching, it understands the meaning of a product and suggests the most relevant alternatives.
+AI Product Sentinel is an AI-powered product comparison system that finds similar products across different marketplaces using semantic similarity instead of basic keyword matching.
 
-This project is designed to simulate how modern recommendation systems work using vector embeddings and semantic similarity.
+This project demonstrates how modern recommendation systems work using embeddings + vector databases (Endee.io).
 
 ---
 
 ## 🚀 What this project does
 
-You just need to paste any product URL and the application will automatically:
+This application allows users to paste any product URL and automatically:
 
-* Extract the product name from the URL
-* Search for similar products online
-* Compare them using AI
-* Display the best matches with a similarity score
+Extract the product name
+Fetch similar products from multiple marketplaces
+Compare them using AI
+Display the most relevant matches with a confidence score
 
 ---
 
@@ -34,32 +34,48 @@ After clicking **Run Analysis**, the system displays the top 8 most similar prod
 ## 🧠 How it works
 
 The workflow is simple and efficient:
-
-1. User enters a product URL
-2. The product name is extracted
-3. The system fetches products from:
-
-   * Snapdeal
-   * Google Shopping
-4. Each product title is converted into a vector using a transformer model
-5. Using the Endee.io vector database, similarity is computed
-6. Products are ranked based on similarity
-7. Top 8 most relevant products are displayed in the UI
+1. User enters a product URL  
+2. Product name is extracted from the URL  
+3. Products are fetched from:
+   - Snapdeal  
+   - Google Shopping (via SerpAPI)  
+4. Product titles are converted into vector embeddings using Sentence Transformers  
+5. The system performs similarity search using:
+   - Endee.io vector database (if available)  
+   - Local cosine similarity (fallback mechanism)  
+6. Results are ranked and top 8 products are displayed  
 
 ---
+## ⚙️ System Architecture
+User Input (Product URL)
+↓
+Product Name Extraction
+↓
+Scraping Layer
+(Snapdeal + Google Shopping)
+↓
+Embedding Layer
+(Sentence Transformers)
+↓
+Similarity Engine
+(Endee Vector DB OR Local Fallback)
+↓
+Ranking (Top 8 Matches)
+↓
+Streamlit UI Display
 
 ## ✨ Features
 
-* Accepts any product URL
-* Compares products across multiple platforms
-* Uses AI for semantic understanding
-* Provides real-time results
-* Displays similarity score (match confidence)
-* Shows top 8 best matches
-* Clean and interactive Streamlit interface
+-  Works with any product URL  
+-  Multi-platform comparison  
+-  AI-based semantic similarity  
+- Real-time product analysis  
+-  Match confidence scoring  
+- Displays top 8 most relevant products  
+- Clean and interactive Streamlit UI  
+- Fault-tolerant system (works even if Endee is down)  
 
 ---
-
 ## 🏗️ Tech Stack
 
 * Frontend: Streamlit
@@ -73,15 +89,15 @@ The workflow is simple and efficient:
 
 ## 💡 Why Endee.io?
 
-Traditional systems rely on keyword matching, which often gives poor results.
+Traditional systems rely on keyword matching, which often gives inaccurate results.
 
-In this project, Endee.io vector database is used to:
+This project uses Endee.io vector database to:
 
-* Understand the meaning of product names
-* Match products even if wording is different
-* Enable fast and accurate similarity search
+- Understand product meaning (semantic search)  
+- Match products even if wording is different  
+- Enable efficient similarity search at scale  
 
-This makes the system smarter and closer to real-world AI recommendation engines.
+Additionally, the system is designed with a fallback mechanism, so it continues to work even if the Endee service is temporarily unavailable.
 
 ---
 
